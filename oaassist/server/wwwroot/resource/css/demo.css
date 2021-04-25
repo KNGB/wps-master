@@ -1,0 +1,71 @@
+.indexTitle {
+    text-align: center;
+}
+
+.indexBody {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.indexFrame {
+    flex: auto;
+    height: 100vh;
+}
+
+.itembody {
+    margin-left: 8px;
+}
+
+.appDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.appSelect {
+    width: 180px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.appSelect select {
+    padding-left: 10px;
+    width: 180px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+}
+
+button {
+    width: 180px;
+    color: #ffffff;
+}
+
+.demoBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.divdemofunction {
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.divFunction {
+    flex: 1;
+}
+
+.divDemo{
+	text-align: center;
+}
+
+#demoBtn {
+	height: 50px;
+}

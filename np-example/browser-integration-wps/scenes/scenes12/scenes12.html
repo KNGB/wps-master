@@ -1,0 +1,46 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景12</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes12.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init(true)">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景12：表格常见操作
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">在指定位置（或光标所在位置）插入表格并填充预制的内容
+    </p>
+    <p class="scenes-p-indent">批量处理已有表格的样式，如标题行重复、设置表格边框等
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="insertTable()">光标处插入表格</button></br></br>
+                    <button onclick="setTableStyle()">设置表格边框样式</button></br></br>
+                    <button onclick="mergeCell()">合并单元格</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

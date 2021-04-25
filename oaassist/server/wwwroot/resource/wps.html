@@ -1,0 +1,67 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="itemhtml">
+
+<head>
+	<meta charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>title</title>
+	<style>
+		button {
+			background: #558FF2;
+		}
+	</style>
+	<script type="text/javascript" src="./js/utils/json2.js"></script>
+	<!-- <script type="text/javascript" src="./js/wps_sdk.js"></script> -->
+	<script type="text/javascript" src="./js/wpsjsrpcsdk.js"></script>
+	<script type="text/javascript" src="./js/wps.js"></script>
+	<link rel="stylesheet" href="./css/demo.css" type="text/css" />
+
+	<link rel="stylesheet" href="highlight/zenburn.css">
+	<script type="text/javascript" src="highlight/highlight.pack.js"></script>
+</head>
+
+<body class="demoBody">
+	<div>
+		<div>
+			<div style="position:inherit" class="btnContainer">
+				<button class="btn" id="newDoc">新建文档</button>
+				<button class="btn" id="openDoc">打开OA文档</button>
+				<button class="btn" id="onlineEditDoc">在线编辑文档（文档不落地）</button>
+				<button class="btn" id="openRevision">打开修订</button>
+				<button class="btn" id="closeRevision">关闭修订</button>
+				<button class="btn" id="protectOpen">保护模式打开</button>
+				<button class="btn" id="openWithPassWd">打开加密文件</button>
+				<button class="btn" id="insertRedHeader">套红头（文档不落地）</button>
+				<button class="btn" id="fillTemplate">填充模板</button>
+				<button class="btn" id="convertDoc">转换文档为pdf并上传</button>
+				<button class="btn" id="taskPaneBookMark">用任务窗格演示书签</button>
+				<button class="btn" id="getDocStatus">获取活动文档状态</button>
+				<button class="btn" id="exitWPS">关闭WPS</button>
+				<button class="btn" id="newOfficialDocument">新建空白公文（公文写作打开）</button>
+				<button class="btn" id="openOfficialDocument">打开公文（公文写作打开）</button>
+				<button class="btn" id="onlineEditOfficialDocument">在线打开公文（公文写作打开）</button>
+			</div>
+		</div>
+	</div>
+	<div class="divdemofunction" id="blockFunc" style="visibility: hidden;">
+		<div class="divFunction">
+			<div class="divDemo">
+				<button id="demoBtn"></button>
+			</div>
+			<legend id="codeDesTitle">功能说明</legend>
+			<pre><p id="codeDes"></p></pre>
+
+		</div>
+		<div class="divFunction">
+			<fieldset>
+				<legend id="codeview">功能代码</legend>
+				<pre id="codepre"><code id="code"></code></pre>
+			</fieldset>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景06</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes06.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init(true)">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景6：带公文域文档的内容操作
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">
+        在与OA的集成时，每一个文种一般都需要关联一个设置好公文域的模板，在新建此类公文时，将表单中的信息插入到公文的对应的公文域中。常见的表单到文档设置的公文域包括：密级、保密期限、紧急程度、发文字号、签发人、标题、主送机关、附件说明、成文日期。对于正文这类需要进行长时间编辑的要素，建议用户在流式控件中编辑完成。
+    </p>
+    <p class="scenes-p-indent">
+        在本场景中，打开远程的带有公文域的文档，开发者可通过自行填写公文域名称和公文域内容，点击“执行替换”按钮完成对公文内容中指定公文域内容的替换，依此模拟业务系统中从表单中抽取数据填充至公文内容中的场景。
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="openServerDocWithField()">打开服务器带公文域文档</button><br><br>
+                    <button onclick="getMainDocFieldText()">获取正文公文域内容</button><br><br>
+                    <button onclick="replaceMainDocFieldText()">替换正文公文域内容</button><br><br>
+                    <button onclick="deleteMainDocField()">删除正文公文域</button><br><br>
+                    <button onclick="insertTestField()">插入一个测试公文域</button><br><br>
+                    <button onclick="changeFieldStyle()">切换公文域显示形式(多次点击循环切换哦)</button><br><br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+
+
+        </tr>
+    </table>
+</body>
+
+</html>

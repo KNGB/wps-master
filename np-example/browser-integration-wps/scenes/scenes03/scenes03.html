@@ -1,0 +1,53 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景03</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes03.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+</head>
+
+<body onload="wpsFrame.initPlugin('wps', function(){wpsFrame.pluginObj.createDocument('wps');});">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景3：只读打开服务器文档
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">
+        OA在流转的过程中，需要有些人阅知（只是看看，不提意见不修改文档），OA对此类人对文的操作将要做限制，一般为只读打开、文档保护、禁止剪切和复制文本内容。
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="readOnlyOpenDocumentFromServer()">打开服务器文档(只读)</button><br />
+                    <button onclick="saveFileForSever()">保存当前文档到服务器</button><br />
+                    <br><br>
+                    <button onclick="enableProtect(false);">取消文档保护</button><br>
+                    <button onclick="enableProtect(true);">开启文档保护</button>
+                    <br><br>
+                    <button onclick="enableCopy(true);">取消禁止复制</button><br>
+                    <button onclick="enableCopy(false);">开启禁止复制</button>
+                    <br><br>
+                    <button onclick="enableCut(true);">取消禁止剪切</button><br>
+                    <button onclick="enableCut(false);">开启禁止剪切</button>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

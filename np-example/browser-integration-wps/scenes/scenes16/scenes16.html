@@ -1,0 +1,48 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景16</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes16.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init(true)">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景16：字体设置
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">修改文档中的字体属性
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="FontName()">设置字体</button></br></br>
+                    <button onclick="FontSize()">设置字体大小</button></br></br>
+                    <button onclick="FontGrowShrink()">字体增大减小</button></br></br>
+                    <button onclick="SubscriptSuperscript()">上下标</button></br></br>
+                    <button onclick="FontBold()">字体加粗</button></br></br>
+                    <button onclick="FontItalic()">字体倾斜</button></br></br>
+                    <button onclick="FontUnderline()">字体下划线</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

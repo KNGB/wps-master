@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<script>
+    var isServerOk = false
+    var isSetupOk = false
+    function gotoDemo()
+    {
+        if (!isServerOk || !isSetupOk){
+            alert("环境检测失败，请启动本地服务端")
+            return
+        }
+        window.location.href="http://127.0.0.1:3888/index.html"
+    }
+    function envReTest(){
+        window.document.getElementById("serverTest").innerHTML = ""
+        window.document.getElementById("setupTest").innerHTML = ""
+        setTimeout(envTest, 1000);
+    }
+    function envTest(){
+        //1.服务端检测
+        
+        var xhr =getHttpObj()
+        xhr.onload=function(e){
+            isServerOk = true
+            var result = "1.检测本地服务端(http://127.0.0.1:3888)是否连通："
+            window.document.getElementById("serverTest").innerHTML = result + "检测成功，服务端地址为http://127.0.0.1:3888"
+        }
+        xhr.onerror=function(e){
+            isServerOk = false
+            var result = "1.检测本地服务端(http://127.0.0.1:3888)是否连通："
+            window.document.getElementById("serverTest").innerHTML = result + "检测失败, 请先通过node启动StartupServer.js"
+        }
+        xhr.open('get', 'http://127.0.0.1:3888/FileList', true)
+        xhr.send()
+
+        //2.安装包检测
+        var xhr1 =getHttpObj()
+        xhr1.onload=function(e){
+            isSetupOk = true
+            var result = "2.检测wps安装是否正确："
+            window.document.getElementById("setupTest").innerHTML = result + xhr1.responseText
+        }
+        xhr1.open('get', 'http://127.0.0.1:3888/WpsSetupTest', true)
+        xhr1.send()
+    }
+    function IEVersion() {
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+        var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
+        var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
+        var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+        if (isIE) {
+            var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+            reIE.test(userAgent);
+            var fIEVersion = parseFloat(RegExp["$1"]);
+            if (fIEVersion == 7) {
+                return 7;
+            } else if (fIEVersion == 8) {
+                return 8;
+            } else if (fIEVersion == 9) {
+                return 9;
+            } else if (fIEVersion == 10) {
+                return 10;
+            } else {
+                return 6; //IE版本<=7
+            }
+        } else if (isEdge) {
+            return 20; //edge
+        } else if (isIE11) {
+            return 11; //IE11  
+        } else {
+            return 30; //不是ie浏览器
+        }
+    }
+    function getHttpObj() {
+        var httpobj = null;
+        if (IEVersion() < 10) {
+            try {
+                httpobj = new XDomainRequest();
+            } catch (e1) {
+                httpobj = new createXHR();
+            }
+        } else {
+            httpobj = new createXHR();
+        }
+        return httpobj;
+    }
+    //兼容IE低版本的创建xmlhttprequest对象的方法
+    function createXHR() {
+        if (typeof XMLHttpRequest != 'undefined') { //兼容高版本浏览器
+            return new XMLHttpRequest();
+        } else if (typeof ActiveXObject != 'undefined') { //IE6 采用 ActiveXObject， 兼容IE6
+            var versions = [ //由于MSXML库有3个版本，因此都要考虑
+                'MSXML2.XMLHttp.6.0',
+                'MSXML2.XMLHttp.3.0',
+                'MSXML2.XMLHttp'
+            ];
+
+            for (var i = 0; i < versions.length; i++) {
+                try {
+                    return new ActiveXObject(versions[i]);
+                } catch (e) {
+                    //跳过
+                }
+            }
+        } else {
+            throw new Error('您的浏览器不支持XHR对象');
+        }
+    }
+</script>
+
+<body onload="envTest()">
+    <div style="display: flex;"><span style="color: #1890ff; margin: 30px auto; font-size: 50px; font-weight: bolder;">OA助手演示Demo</span></div>
+    <div class="divstyle0" id="envTest">
+        <span>开始境检测：</span><br>
+        <span id="serverTest"></span><br>
+        <span id="setupTest"></span><br>
+    </div>
+    <div class="divstyle">
+            <span class="arrow">&rarr;</span>
+            <button class="ant-btn" onclick="gotoDemo()">点击开始体验</button>
+    </div>
+    <br>
+    <div><button id="btnEnvTest" onclick="envReTest()">重新开始环境检测</button></div>
+<style>
+.divstyle0{
+    border:1px solid black;
+    height: 300px;
+    width: 40%;
+    float: left;
+    font-size: 15px;
+    color: dimgray;
+}
+.divstyle{
+    height: 300px;
+    width: 40%;
+    vertical-align: middle;
+    display:flex;
+    align-items:center;
+}
+.arrow{
+    font-size: 50px; 
+    color: #1890ff; 
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.ant-btn {
+    vertical-align: middle;
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #1890ff;
+    border-color: #1890ff;
+}
+
+#btnEnvTest {
+    vertical-align: middle;
+    margin: 5px;
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 200;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 30px;
+    padding: 0 15px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #1890ff;
+    border-color: #1890ff;
+}
+
+</style>
+</html>

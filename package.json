@@ -1,0 +1,18 @@
+{
+  "name": "wps",
+  "version": "1.0.0",
+  "description": "在此目录中执行npm install，即可在写代码时，调用wps接口可代码提示。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wps-jsapi": "latest"
+  }
+}

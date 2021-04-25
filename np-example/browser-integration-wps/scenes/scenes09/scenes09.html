@@ -1,0 +1,57 @@
+<!DOCTYPE HTML
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<title>OA系统集成-场景09</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src='../../common/js/wps_general.js'></script>
+	<script type="text/javascript" src='../js/scenes.js'></script>
+	<script type="text/javascript" src='./scenes09.js'></script>
+	<link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+	<script type="text/javascript">
+		var wpsFrame = new WPSFrame;
+		window.console.log = function (msg) {
+			var element = document.getElementById('event-text');
+			var oldText = element.innerHTML;
+			if (oldText.length == 0) {
+				element.innerHTML = msg + '\n--------------------';
+			} else {
+				element.innerHTML = element.innerHTML + '\n' + msg + '\n--------------------';
+			}
+			element.scrollTop = element.scrollHeight
+		}
+	</script>
+
+</head>
+
+<body onload="init()">
+	<div id="header" class="white-div">
+		<h2 class="scenes-h2">
+			场景7：事件监听（保存，关闭等）
+		</h2>
+	</div>
+	<h3> 简介： </h3>
+	<p class="scenes-p-indent">当用户操作文档时，我们可以通过事件监听来控制用户行为，例如用户在保存的时候，我们可以拦截之后，直接保存到服务器上</p>
+	<p class="scenes-p-indent">或者当用户关闭文档的时候，我们可以做一些额外的处理操作</p>
+	<table>
+		<tr>
+			<td>
+				<div id="doc" align="left" style="position:inherit">
+					<button onclick="registerEventListener()">注册事件监听</button></br></br>
+					<button onclick="unRegisterEventListener()">取消事件监听</button></br></br>
+				</div>
+				<div id="doc" align="left" style="position:inherit">
+					<p>事件信息显示区域</p>
+					<textarea id="event-text" style="width: 180px; height: 300px"></textarea>
+				</div>
+			</td>
+			<td valign="top">
+				<div id="wps" align="right" class="scenes-div-wps">
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

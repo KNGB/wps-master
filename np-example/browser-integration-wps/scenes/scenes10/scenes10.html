@@ -1,0 +1,45 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景10</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes10.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init();">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景10：书签常用操作
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">针对业务系统中文档合并、文档内容批处理的使用场景，可采用书签功能进行实现，常用的场景包括书签内容替换，通过关键字进行书签光标定位。
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="replaceBookMarkContent()">书签内容替换</button></br></br>
+                    <button onclick="cursorBookMark()">书签定位光标</button></br></br>
+                    <button onclick="insertBookMarks()">插入多个书签</button></br></br>
+                    <button onclick="getBookMarksName()">获取所有书签名字</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

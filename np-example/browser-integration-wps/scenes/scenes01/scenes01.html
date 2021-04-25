@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景01</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes01.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+</head>
+
+<body onload="init(true)">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景1：打开服务器文档(可编辑模式)
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">
+        从服务器上打开一个文档，待编辑结束之后，可将该文档上传到指定URL的服务器上。
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="openDocumentFromSever()">打开服务器文档</button><br />
+                    <button onclick="saveFileForSever()">保存当前文档到服务器</button><br />
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景18</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes18.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init(true);">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景18：图形设置
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">插入各类图形并对其进行简单操作
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="InsertEllipse()">插入椭圆</button></br></br>
+                    <button onclick="InsertSymbol()">插入符号</button></br></br>
+                    <button onclick="InsertWordArt()">插入艺术字</button></br></br>
+                    <button onclick="IncrementRotation()">旋转图形</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

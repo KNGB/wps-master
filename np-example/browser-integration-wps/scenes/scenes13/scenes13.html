@@ -1,0 +1,46 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景13</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes13.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="initHeader();">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景13：页眉页脚常见操作
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">插入预设的页眉页脚数据
+    </p>
+    <p class="scenes-p-indent">设置首页不同，
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="deleteHeaderLine()">删除页眉横线</button></br></br>
+                    <button onclick="deletePageNumber()">删除页码</button></br></br>
+                    <button onclick="insertPageNumber()">插入页码（首页不同）</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景08</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes08.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init()">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景8：判断文档是否在上一次保存后有修改
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">在OA的使用场景中，为了提高文件编辑时的可靠性，为了防止终端OS、浏览器出现崩溃现象，致使正在编辑的文档出现未及时保存编辑状态，造成不良用户体验，OA此时会写一个定时器，设置一个时长，按时长将文档保存至远程。在执行保存前，通过此接口判断两次保存间隔时间之间文档是否有修改，有修改，执行保存操作，无修改，不执行保存操作。依次降低OA服务端的压力。
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="saveToDirty()">判断文档变动并保存</button></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

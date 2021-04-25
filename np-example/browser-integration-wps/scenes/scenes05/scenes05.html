@@ -1,0 +1,43 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes05.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init(true)">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景5：文件转换格式保存到服务器
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">集成到OA中的流式控件，保存文件是将文件流传递至OA的服务端进行存储。</p>
+    <p class="scenes-p-indent">流转版（输出为OFD格式和输出为PDF格式）的操作都是将文件后缀名定义为.ofd或.pdf即可。</p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="openDocumentFromSever()">打开服务器文档</button></br>
+                    <button onclick="saveFileServerForTargetFormat()">保存目标格式文档到服务器</button></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "oaassist_demo",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "StartupServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oaassist",
+    "server",
+    "demo"
+  ],
+  "author": "aizelin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "ini": "^1.3.5",
+    "regedit": "^3.0.3",
+    "urlencode": "^1.1.0"
+  }
+}

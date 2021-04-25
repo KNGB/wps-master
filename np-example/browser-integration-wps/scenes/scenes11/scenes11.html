@@ -1,0 +1,43 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景11</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes11.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init()">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景11：打印相关操作
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">在日常办公中我们经常需要打印公文，而通常公文打印纸张都是带有固定头文字的文件纸张，我们一般需要做的是在相应的位置打印所编辑好的文字，进行套打。一般业务系统设置好套打模板，再通过书签的方式将需要打印的内容填充到文档中再打印。在WPS的设置中，将“打印”选项中设置为“套打隐藏文字”
+    </p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <button onclick="popupPrintDialog()">弹出打印对话框</button></br></br>
+                    <button onclick="printOut()">不弹框直接打印</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

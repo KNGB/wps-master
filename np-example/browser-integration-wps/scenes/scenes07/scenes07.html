@@ -1,0 +1,52 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>OA系统集成-场景07</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src='../../common/js/wps_general.js'></script>
+    <script type="text/javascript" src='../js/scenes.js'></script>
+    <script type="text/javascript" src='./scenes07.js'></script>
+    <link rel="stylesheet" href="../css/child-scenes.css" type="text/css" />
+    <script type="text/javascript">
+        var wpsFrame = new WPSFrame;
+    </script>
+
+</head>
+
+<body onload="init()">
+    <div id="header" class="white-div">
+        <h2 class="scenes-h2">
+            场景7：按照预设好的图片显示格式插入图片
+        </h2>
+    </div>
+    <h3> 简介： </h3>
+    <p class="scenes-p-indent">用户在编辑流式文档时，在光标处向文档中插入图片，可能是个人的签名（未推行个人签章的使用场景）。</p>
+    <p class="scenes-p-indent">图片插入后，高频设置的图片版式为四周环绕或浮于文字上方。</p>
+    <table>
+        <tr>
+            <td>
+                <div id="doc" align="left" style="position:inherit">
+                    <select id="AreaId" name="AreaId" size="1" class="scenes-select">
+                        <option>请选择插入图片样式</option>
+                        <option value='0'>四周型环绕</option>
+                        <option value='1'>紧密型环绕</option>
+                        <option value='2'>穿越型环绕</option>
+                        <option value='3'>衬于文字上方</option>
+                        <option value='4'>上下行环绕</option>
+                        <option value='5'>衬于文字下方</option>
+                        <option value='7'>嵌入型</option>
+                    </select></br></br>
+                    <button onclick="insertPicture()">插入选中样式的图片(光标处插入)</button></br></br>
+                </div>
+            </td>
+            <td valign="top">
+                <div id="wps" align="right" class="scenes-div-wps">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

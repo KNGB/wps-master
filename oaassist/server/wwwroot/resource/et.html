@@ -1,0 +1,53 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="itemhtml">
+
+<head>
+	<meta charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+	<title>title</title>
+	<style>
+		button {
+			background: #377E3F;
+		}
+	</style>
+	<script type="text/javascript" src="./js/utils/json2.js"></script>
+	<script type="text/javascript" src="./js/wps_sdk.js"></script>
+	<script type="text/javascript" src="./js/et.js"></script>
+	<link rel="stylesheet" href="./css/demo.css" type="text/css" />
+	<link rel="stylesheet" href="highlight/zenburn.css">
+	<script type="text/javascript" src="highlight/highlight.pack.js"></script>
+</head>
+
+<body class="demoBody">
+	<div>
+		<div>
+			<div style="position:inherit" class="btnContainer">
+				<button class="btn" id="newDoc">新建文档</button>
+				<button class="btn" id="openDoc">打开文档</button>
+				<button class="btn" id="onlineEditDoc">打开在线文档</button>
+			</div>
+		</div>
+	</div>
+	<div class="divdemofunction" id="blockFunc" style="visibility: hidden;">
+		<div class="divFunction">
+			<div class="divDemo">
+				<button id="demoBtn"></button>
+			</div>
+			<p id="codeDesTitle">功能说明</p>
+			<pre>
+			<p id="codeDes"></p>
+			</pre>
+		</div>
+		<div class="divFunction">
+			<fieldset>
+				<legend id="codeview">功能代码</legend>
+				<pre id="codepre"><code id="code"></code></pre>
+			</fieldset>
+		</div>
+	</div>
+</body>
+
+</html>
